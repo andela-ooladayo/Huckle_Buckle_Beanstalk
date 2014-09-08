@@ -1,0 +1,72 @@
+<!--Huckle Buckle Beanstalk is a guessing game, the computer generate a number randomly, while the user try to guess the number
+the program response by giving a relevance feedback helping the user to guess within the range the next time  -->
+
+<!DOCTYPE <!DOCTYPE html>
+<html>
+	<!--Huckle Buckle Beanstalk Reference code -->
+	<head>
+		<title>Huckle Buckle Beanstalk</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css"></link>
+		<script rel="javscript" type="text/javascript" src="js/main.js"></script>
+		<script rel="javscript" type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<meta charset="utf-8">
+	</head>
+	<!--Huckle Buckle Beanstalk Page -->
+	<body>
+		<!--Huckle Buckle Beanstalk Page Header -->
+		<header>
+			<!--Huckle Buckle Beanstalk Page Header logo -->
+			<div id="logo">
+				<img src="">
+			</div>
+			<!--Huckle Buckle Beanstalk Page Header title bar -->
+			<div id="titlebar">
+				<h2>Huckle Buckle Beanstalk</h2>
+			</div>
+		</header>
+		<!--Huckle Buckle Beanstalk Page Main Content -->
+		<section>
+			<!--Huckle Buckle Beanstalk Main Page Content Container -->
+			<div class="maincontent">
+				<!--Huckle Buckle Beanstalk Main Page Form-->
+				<form>
+				    <h3>Enter a number between 0 and 100 !!! </h3>
+					<input type="text" id="guessnumber" name="guess" maxlength="3" title="Enter a number between 0-100!" >
+					<p id="validator">Invalid Input! Try again!</p>
+					<div id="buttons">
+						<input type="submit" name="submit" id="submit" value="Submit">
+						<input type="button" id="restart" value="Restart Game"></input>
+					</div>
+					 <!--Huckle Buckle Beanstalk Main Page Form Responses-->
+					 <div id="response">
+					 	<span id="feedbackwait">Waiting........!!!</span>
+	                    <span id="feedbackhot">Getting hotter!</span>
+	                    <span id="feedbackcold">Getting colder!</span>
+	                    <span id="feedbackneither">Neither Hot or Cold</span>
+	                    <span id="guessed">You guessed it</span>
+					 </div>
+				</form>
+				<!--Huckle Buckle Beanstalk Main Page Sidebar-->
+				<div class="sidebar">
+					<div>
+						<!--Huckle Buckle Beanstalk Main Page Sidebar Content-->
+						<div>
+							<p id="incremental"></p>
+						</div>
+						<h3>&middot &middot far</h3>
+						<h2>&middot &middot mid</h2>
+						<h1>&middot &middot here</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Huckle Buckle Beanstalk Page Footer -->
+		<footer>
+			<div>
+				<img src="images/footer_img.png">
+			</div>
+		</footer>
+	</body>
+	<script rel="javscript" type="text/javascript" src="js/main.js"></script>
+	<script rel="javscript" type="text/javascript" src="js/jquery-1.11.1.js"></script>
+</html>
