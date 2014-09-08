@@ -1,0 +1,169 @@
+/*********************************
+			GENERAL
+*********************************/
+*{
+	margin:0%;
+}
+body{
+	margin:4% 15%;
+}
+#guessnumber,#response,.maincontent{
+	background-size:100% 100%;
+}
+.maincontent,#guessnumber,#response,#response span,#validator,.buttons{
+	text-align:center;
+}
+/*********************************
+			HEADER 
+*********************************/
+
+header{
+	width:100%;
+	/*background-color: #456;*/
+	height:120px;
+	border-top-left-radius: 5em 5em;
+	background:url('../images/bck1.png');
+	background-size:100% 100%;
+}
+#logo{
+	width:15%;
+	margin:1.4%;
+	height:100px;
+	float:left;
+}
+header #titlebar{
+	width:60%;
+	font-size:4.5ex;
+	float: right;
+	height:70px;
+	text-align:center;
+	margin:4% 20% 0 0;
+	color:green;
+}
+/*********************************
+			SECTION
+*********************************/
+section{
+	width:100%;
+	height:350px;
+	display:inline;
+}
+
+ .maincontent{
+	width:100%;
+	height:70%;
+	border-bottom-right-radius: 5em 5em;
+	background:url('../images/bck1.png');
+	display:inline-block;
+}
+/*********************************
+			SECTION FORM
+*********************************/
+form{
+	width:70%;
+	height:98%;
+	display:block;
+}
+form h3{
+	padding:3% 0 0 0;
+	font-size:4.5ex;
+	color:green;
+}
+#guessnumber{
+	background:url('../images/textfield.png');
+	width:40%;
+	height:20%;
+	margin:4% 4% 1% 0%;
+	border: 4px solid #ffc;
+	outline:none;
+	color:white;
+	font-size:6ex;
+	font-weight:bold;
+}
+
+#submit,#restart{
+	font-size:3ex;
+	padding:1.5% 5%;
+	margin:5% 2% 0 0%;
+	font-weight:bold;
+	border:6px solid;
+	background-color:green;
+	color:#ffc;
+}
+#submit:hover,#restart:hover{
+	background-color:brown;
+	cursor: hand;
+	border-color: #F00 #C30 #C30 #F00;
+	cursor: pointer;
+	-webkit-animation: pulsate 5s linear infinite;
+    animation: pulsate 5s linear infinite;
+}
+#restart{
+	padding:1.5% 2%;
+}
+#response{
+	height:10%;
+	width:50%;
+	margin:10% 0 0 23.1%;
+	padding:2% 0 1% 0;
+	background:url('../images/img1.jpg');
+	
+}
+#response span{
+	font-size:4ex;
+	color:#fffff0;
+}
+#validator{
+	width:20%;
+	position:fixed;
+	font-size:3ex;
+	margin-bottom:4%;
+	margin-left:14%;
+	color:red;
+}
+/*********************************
+			SECTION SIDEBAR
+*********************************/
+.sidebar{
+	width:30%;
+	height:98%;
+	float:right;
+	position:relative;
+	bottom:98%;
+}
+.sidebar div div,.sidebar div h3,.sidebar div h2,.sidebar div h1,#incremental{
+	position:absolute;
+}
+.sidebar div div{
+	width:20%;
+	height:80%;
+	background-color:lightgreen;
+	left:20%;
+	top:21%;
+}
+.sidebar div h3,.sidebar div h2,.sidebar div h1{
+	width:31%;
+	left:36%;
+	color:green;
+	font-size:1.5em;
+}
+.sidebar div h3{
+	top:20%;
+}
+.sidebar div h2{
+	top:57%;
+}
+.sidebar div h1{
+	top:96%;
+}
+#incremental{
+	width:100%;
+	height:0px;
+	background-color:red;
+}
+footer div img{
+	width:99%;
+	height:35px;
+}
+
+
