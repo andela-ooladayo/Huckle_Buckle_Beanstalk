@@ -24,20 +24,16 @@ header{
 	background:url('../images/bck1.png');
 	background-size:100% 100%;
 }
-#logo{
-	width:15%;
-	margin:1.4%;
-	height:100px;
-	float:left;
-}
+
 header #titlebar{
-	width:60%;
-	font-size:4.5ex;
+	width:100%;
+	font-size:4ex;
 	float: right;
 	height:70px;
 	text-align:center;
-	margin:4% 20% 0 0;
+	margin:4% 0% 0 0;
 	color:green;
+	padding-right:3%;
 }
 /*********************************
 			SECTION
@@ -65,7 +61,7 @@ form{
 }
 form h3{
 	padding:3% 0 0 0;
-	font-size:4.5ex;
+	font-size:4ex;
 	color:green;
 }
 #guessnumber{
@@ -165,4 +161,76 @@ footer div img{
 	height:35px;
 }
 
+/*********************************
+TABLET DEVICE RESOLUTION STYLING
+*********************************/
+@media screen and (max-width: 1024px){
+	header #titlebar
+		{
+		margin:7% 0% 0 0;
+		font-size:3ex;
+	}
+
+	form h3
+		{
+		font-size:3.1ex;
+	}
+	#response{
+
+		font-size: 2ex;
+	}
+	#validator{
+		width:80%;
+		position:relative;
+		font-size:2.5ex;
+		margin-left:10%
+	}
+	
+	.sidebar div h3,.sidebar div h2,.sidebar div h1{
+		width:31%;
+		left:36%;
+		color:green;
+		font-size:1em;
+	}
+
+}
+
+/*********************************
+MOBILE PHONE RESOLUTION STYLING
+*********************************/
+@media screen and (max-width: 480px){
+
+	header #titlebar
+		{
+		margin:20% 0% 0 0;
+		font-size:2ex;
+	}
+
+	form h3
+		{
+		font-size:2.5ex;
+	}
+	#response{
+
+		font-size: 1.5ex;
+		margin:40% 0 0 23.1%;
+		width:60%;
+
+	}
+	#validator{
+		width:80%;
+		position:relative;
+		font-size:2ex;
+		margin-left:10%
+	}
+	
+	.sidebar div h3,.sidebar div h2,.sidebar div h1{
+		width:31%;
+		left:36%;
+		color:green;
+		font-size:1em;
+	}
+
+
+}
 
