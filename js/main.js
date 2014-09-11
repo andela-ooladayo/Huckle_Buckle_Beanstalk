@@ -1,7 +1,7 @@
 //Huckle Buckle Beanstalk is a guessing game, the computer generate a number randomly, while the user try to guess the number
 //the program response by giving a relevance feedback helping the user to guess within the range the next time 
 
-var huckleBuckleBeanstalk = {
+var beanStalk = {
 				//initial properties of huckleBuckleBeanstalk game;
 				validator:$('#validator').hide(),
 				feedbackWait:$('#feedbackwait').show(),
@@ -11,12 +11,12 @@ var huckleBuckleBeanstalk = {
 				previousUserChoice:null,
 				max_Temp:null,
 	onReady:function(){
-				$('#guessnumber').focus(huckleBuckleBeanstalk.summitValidator).keyup(huckleBuckleBeanstalk.summitValidator);
-				$('#guessnumber').focus(huckleBuckleBeanstalk.inputEvent).keyup(huckleBuckleBeanstalk.inputEvent);
-				$('#restart').click(huckleBuckleBeanstalk.newGame);
-				$('#submit').click(huckleBuckleBeanstalk.summitEvent);
-				//$('form').submit(huckleBuckleBeanstalk.summitEvent2);
-				//newGame();//
+				$('#guessnumber').focus(beanStalk.summitValidator).keyup(beanStalk.summitValidator);
+				$('#guessnumber').focus(beanStalk.inputEvent).keyup(beanStalk.inputEvent);
+				$('#restart').click(beanStalk.newGame);
+				$('#submit').click(beanStalk.summitEvent);
+				$('form').submit(beanStalk.summitEvent2);
+				beanStalk.newGame();
 			},
 	// what happen when the user enter invalid input
 	inputEvent:function(){
@@ -36,30 +36,30 @@ var huckleBuckleBeanstalk = {
 						}
 					},	
 	newGame:function(){
+				beanStalk.computerChoice = Math.floor(Math.random()*100);
+				var previousUserChoice = 0;
 				$('#feedbackwait').show();
 				$('#feedbackwait').siblings().hide();
 				$('#guessnumber').val("");
 				$('#incremental').css("height", 0);
 			},
 	//what happen when submit button is pressed!
-	summitEvent:function (e){
-					var computerChoice = Math.floor(Math.random()*100);
-					var previousUserChoice = 0;
-					var max_Temp=Math.max(Math.abs(100-computerChoice) , computerChoice);
-					e.preventDefault();
-					var userChoice = parseInt($('#guessnumber').val());
-					var comp_user = Math.abs(computerChoice-userChoice)
-					var newUserChoice = max_Temp-comp_user
+	summitEvent:function (evnt){
+					evnt.preventDefault();
+					beanStalk.max_Temp=Math.max(Math.abs(100-beanStalk.computerChoice) , beanStalk.computerChoice);
+					beanStalk.userChoice = parseInt($('#guessnumber').val());
+					var comp_user = Math.abs(beanStalk.computerChoice-beanStalk.userChoice)
+					var newUserChoice = beanStalk.max_Temp-comp_user
 					$('#response span').hide()
-					if(newUserChoice==max_Temp){ 
+					if(newUserChoice==beanStalk.max_Temp){ 
 						$('#guessed').show();
 						$('#guessed').siblings().hide();
 					}
-					else if(newUserChoice > previousUserChoice){ 
+					else if(newUserChoice > beanStalk.previousUserChoice){ 
 						$('#feedbackhot').siblings().hide();
 						$('#feedbackhot').show();
 					}
-				 	else if(newUserChoice < previousUserChoice){
+				 	else if(newUserChoice < beanStalk.previousUserChoice){
 				 	 	$('#feedbackcold').siblings().hide();
 				 		$('#feedbackcold').show();
 				 	}
@@ -67,9 +67,9 @@ var huckleBuckleBeanstalk = {
 					 	$('#feedbackneither').siblings().hide();
 				 		$('#feedbackneither').show();
 					}
-					previousUserChoice=newUserChoice;
-					var heightIncrem = newUserChoice*3.8;
+					beanStalk.previousUserChoice=newUserChoice;
+					var heightIncrem = newUserChoice*3.6;
 					$('#incremental').css("height", heightIncrem);
 				}
 }
-$(document).ready(huckleBuckleBeanstalk.onReady);
+$(document).ready(beanStalk.onReady);
