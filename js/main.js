@@ -1,6 +1,6 @@
 //Huckle Buckle Beanstalk is a guessing game, the computer generate a number randomly, while the user try to guess the number
+//the program response by giving a relevance feedback helping the user to guess within the range the next time.
 //the program response by giving a relevance feedback helping the user to guess within the range the next time 
-
 var beanStalk = {
 				//initial properties of huckleBuckleBeanstalk game;
 				validator:$('#validator').hide(),
@@ -29,12 +29,6 @@ var beanStalk = {
 						$('#validator').hide();
 					}
 				},
-	// what happen when the user enter invalid input
-	summitValidator:function(){
-						if($('#guessnumber').val() > 100 || $('#guessnumber').val() < 0 || isNaN($('#guessnumber').val()) || $('#guessnumber').val() == " " ){
-						$('#submit').click().prop("disabled")
-						}
-					},	
 	newGame:function(){
 				beanStalk.computerChoice = Math.floor(Math.random()*100);
 				var previousUserChoice = 0;
@@ -73,3 +67,4 @@ var beanStalk = {
 				}
 }
 $(document).ready(beanStalk.onReady);
+
